@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    
+    <!-- Google Fonts for crisp typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header-container">
+            <h1 class="logo">My Portfolio</h1>
+            <nav class="nav">
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Hero / Intro -->
+        <section class="hero" id="about">
+            <h2>Hi, I'm <span class="highlight">Your Name</span> 👋</h2>
+            <p>Welcome to my showcase of engineering, coding, and hardware projects. Explore my work below featuring live demos, media, and source code.</p>
+        </section>
+
+        <!-- Projects Grid Section -->
+        <section id="projects" class="projects-section">
+            <h3 class="section-title">Featured Projects</h3>
+            <div id="portfolio-grid" class="grid">
+                <!-- Javascript will load projects here from projects.js -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 | Built for GitHub Pages</p>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loads your project data script -->
+    <script src="projects.js"></script>
+</body>
+</html>
