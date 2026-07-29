@@ -8,7 +8,7 @@ const projects = [
         title: "Sensor Skins for Vehicle Tires",
         description: "R&D Undergraduate Researcher | Conducted material synthesis and manufacturing research alongside PhD researchers to develop flexible tactile sensor skins. Formulated, mixed, and processed custom polymer elastomer solutions for tire integration to enable real-time tread deformation and dynamic contact-patch data collection.",
         mediaType: "image", // Options: "image" or "video"
-        mediaSrc: "eli-m/sensor_skin.png", // Path to image/video inside your media/ folder
+        mediaSrc: "eli-m/media/sensor_skin.png", // Path to image/video inside your media/ folder
         tags: ["R&D", "Sensor Fabrication", "Automotive"],
         githubLink: "https://github.com/eli-m/tire-sensor-skins"
     },
@@ -16,7 +16,7 @@ const projects = [
         title: "Flexure Beam-Hinge Structural Simulation",
         description: "R&D Undergraduate Researcher | Collaborated with a PhD researcher on non-linear numerical structural analysis for advanced flexible lattice geometries. Developed Python scripts using SciPy to model multi-node out-of-plane buckling behavior along the Z-axis under physical displacements to guide experimental validation.",
         mediaType: "image",
-        mediaSrc: "eli-m/beam_hinge.jpg",
+        mediaSrc: "eli-m/media/beam_hinge.jpg",
         tags: ["R&D", "Python", "SciPy", "FEA", "Structural Mechanics"],
         githubLink: "https://github.com/eli-m/lattice-buckling-sim"
     },
@@ -24,7 +24,7 @@ const projects = [
         title: "Drone Flight Control Law",
         description: "Engineered a custom rotation rate demand law to improve aerodynamic stability during turbulent conditions. Replaced inefficient rate control loops for high-performance dynamic handling.",
         mediaType: "video", // Rendered automatically as an inline HTML5 video
-        mediaSrc: "eli-m/thursday_group3_7",
+        mediaSrc: "eli-m/media/thursday_group3_7",
         tags: ["Python", "Control Theory", "Avionics"],
         githubLink: "https://github.com/eli-m/drone-flight-control"
     }
