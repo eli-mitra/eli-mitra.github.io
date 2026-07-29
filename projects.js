@@ -8,9 +8,9 @@ const projects = [
         title: "Sensor Skins for Vehicle Tires",
         description: "R&D Undergraduate Researcher | Conducted material synthesis and manufacturing research alongside PhD researchers to develop flexible tactile sensor skins. Formulated, mixed, and processed custom polymer elastomer solutions for tire integration to enable real-time tread deformation and dynamic contact-patch data collection.",
         mediaType: "image", // Options: "image" or "video"
-        mediaSrc: "media/sensor_skin.png", // Path to image/video inside your media/ folder
+        mediaSrc: "media/sensor_skin.png", // Ensure exact file name & case match on GitHub
         tags: ["R&D", "Sensor Fabrication", "Automotive"],
-        githubLink: "#"
+        githubLink: "#" // Replace '#' with your repo link (e.g. "https://github.com/eli-mitra/your-repo")
     },
     {
         title: "Flexure Beam-Hinge Structural Simulation",
@@ -18,15 +18,15 @@ const projects = [
         mediaType: "image",
         mediaSrc: "media/beam_hinge.jpg",
         tags: ["R&D", "Python", "SciPy", "FEA", "Structural Mechanics"],
-        githubLink: "#"
+        githubLink: "#" 
     },
     {
         title: "Drone Flight Control Law",
         description: "Engineered a custom rotation rate demand law to improve aerodynamic stability during turbulent conditions. Replaced inefficient rate control loops for high-performance dynamic handling.",
-        mediaType: "video", // Rendered automatically as an inline HTML5 video
+        mediaType: "video",
         mediaSrc: "media/thursday_group3_7.mp4",
         tags: ["Python", "Control Theory", "Avionics"],
-        githubLink: "#"
+        githubLink: "#" 
     }
 ];
 
@@ -48,7 +48,8 @@ function loadProjects() {
         // Select media element based on type
         let mediaHTML = '';
         if (project.mediaType === 'video') {
-            mediaHTML = `<video src="${project.mediaSrc}" controls muted loop playsinline></video>`;
+            // Added autoplay, playsinline, and muted so video renders and plays properly
+            mediaHTML = `<video src="${project.mediaSrc}" controls autoplay muted loop playsinline></video>`;
         } else {
             mediaHTML = `<img src="${project.mediaSrc}" alt="${project.title}" loading="lazy">`;
         }
