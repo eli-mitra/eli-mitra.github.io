@@ -10,7 +10,7 @@ const projects = [
         mediaType: "image", // Options: "image" or "video"
         mediaSrc: "media/sensor_skin.png", // Path to image/video inside your media/ folder
         tags: ["R&D", "Sensor Fabrication", "Automotive"],
-        githubLink: "https://github.com/eli-mitra/tire-sensor_skin"
+        githubLink: "https://github.com/eli-mitra.github.io/tire-sensor_skin"
     },
     {
         title: "Flexure Beam-Hinge Structural Simulation",
@@ -18,7 +18,7 @@ const projects = [
         mediaType: "image",
         mediaSrc: "media/beam_hinge.jpg",
         tags: ["R&D", "Python", "SciPy", "FEA", "Structural Mechanics"],
-        githubLink: "https://github.com/eli-mitra/beam_hinge"
+        githubLink: "https://github.com/eli-mitra.github.io/beam_hinge"
     },
     {
         title: "Drone Flight Control Law",
@@ -26,7 +26,7 @@ const projects = [
         mediaType: "video", // Rendered automatically as an inline HTML5 video
         mediaSrc: "media/thursday_group3_7",
         tags: ["Python", "Control Theory", "Avionics"],
-        githubLink: "https://github.com/eli-mitra/thursday_group_3_7"
+        githubLink: "https://github.com/eli-mitra.github.io/thursday_group_3_7"
     }
 ];
 
