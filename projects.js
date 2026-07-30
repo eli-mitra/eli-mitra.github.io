@@ -1,4 +1,4 @@
-n// ==========================================================================
+// ==========================================================================
 // MAIN PORTFOLIO DATA FILE
 // ==========================================================================
 
@@ -6,9 +6,8 @@ const projects = [
     {
         title: "Sensor Skins for Vehicle Tires",
         tags: ["R&D", "Sensor Fabrication", "Automotive", "Materials Science"],
-        // Attach multiple media items (images or videos)
         media: [
-            { type: "image", src: "sensor_skin.png" },
+            { type: "image", src: "https://eli-mitra.github.io/media/sensor_skin.png" }
         ],
         objective: "Develop a flexible tactile sensor skin capable of withstanding dynamic tire deformation to gather real-time tread wear and contact-patch telemetry.",
         contribution: "R&D Undergraduate Researcher | Synthesized and processed specialized polymer elastomer formulations alongside PhD researchers, focusing on chemical solution mixing and mold preparation.",
@@ -20,8 +19,8 @@ const projects = [
         title: "Flexure Beam-Hinge Structural Simulation",
         tags: ["R&D", "Python", "SciPy", "FEA", "Structural Mechanics"],
         media: [
-            { type: "image", src: "beam_hinge.jpg" },
-            { type: "image", src: "beam_hinge_cad.jpeg" } // Add CAD or stress contour images here
+            { type: "image", src: "https://eli-mitra.github.io/media/beam_hinge.jpg" },
+            { type: "image", src: "https://eli-mitra.github.io/media/beam_hinge_cad.jpeg" }
         ],
         objective: "Perform non-linear structural modeling to predict out-of-plane buckling behaviors in complex flexure beam-hinge lattice geometries.",
         contribution: "R&D Undergraduate Researcher | Collaborated with a PhD candidate to construct Python-based numerical models for multi-node elastic lattice displacement.",
@@ -33,7 +32,7 @@ const projects = [
         title: "Drone Flight Control Law",
         tags: ["Python", "Control Theory", "Avionics", "Robotics"],
         media: [
-            { type: "video", src: "https://eli-mitra.github.io/media/drone_video1.mp4" },
+            { type: "video", src: "https://eli-mitra.github.io/media/drone_video1.mp4" }
         ],
         objective: "Engineer a stable flight control software law to mitigate external wind turbulence and improve dynamic attitude recovery.",
         contribution: "Recoded core flight control law algorithms, replacing inefficient integrated rate loops with an explicit rotation rate demand law.",
@@ -57,7 +56,7 @@ function loadProjects() {
         const card = document.createElement('article');
         card.className = 'project-card';
 
-        // Build media gallery HTML (Iterates through all images/videos in media array)
+        // Build media gallery HTML
         let galleryHTML = '<div class="project-media-gallery">';
         project.media.forEach(item => {
             if (item.type === 'video') {
@@ -116,10 +115,10 @@ function loadProjects() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', loadProjects);
-
-// Smooth-scroll button handler
+// Smooth-scroll & load initialization
 document.addEventListener('DOMContentLoaded', () => {
+    loadProjects();
+
     const scrollBtn = document.getElementById('scroll-to-projects');
     if (scrollBtn) {
         scrollBtn.addEventListener('click', (e) => {
