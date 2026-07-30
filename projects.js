@@ -7,7 +7,7 @@ const projects = [
         title: "Sensor Skins for Vehicle Tires",
         tags: ["R&D", "Sensor Fabrication", "Automotive", "Materials Science"],
         media: [
-            { type: "image", src: "https://eli-mitra.github.io/sensor_skin.png" }
+            { type: "image", src: "sensor_skin.png" }
         ],
         objective: "Develop a flexible tactile sensor skin capable of withstanding dynamic tire deformation to gather real-time tread wear and contact-patch telemetry.",
         contribution: "R&D Undergraduate Researcher | Synthesized and processed specialized polymer elastomer formulations alongside PhD researchers, focusing on chemical solution mixing and mold preparation.",
@@ -19,8 +19,8 @@ const projects = [
         title: "Flexure Beam-Hinge Structural Simulation",
         tags: ["R&D", "Python", "SciPy", "FEA", "Structural Mechanics"],
         media: [
-            { type: "image", src: "https://eli-mitra.github.io/beam_hinge.jpg" },
-            { type: "image", src: "https://eli-mitra.github.io/beam_hinge_cad.jpeg" }
+            { type: "image", src: "beam_hinge.jpg" },
+            { type: "image", src: "beam_hinge_cad.jpeg" }
         ],
         objective: "Perform non-linear structural modeling to predict out-of-plane buckling behaviors in complex flexure beam-hinge lattice geometries.",
         contribution: "R&D Undergraduate Researcher | Collaborated with a PhD candidate to construct Python-based numerical models for multi-node elastic lattice displacement.",
@@ -32,7 +32,7 @@ const projects = [
         title: "Drone Flight Control Law",
         tags: ["Python", "Control Theory", "Avionics", "Robotics"],
         media: [
-            { type: "video", src: "https://eli-mitra.github.io/drone_video1.mp4" }
+            { type: "video", src: "drone_video1.mp4" }
         ],
         objective: "Engineer a stable flight control software law to mitigate external wind turbulence and improve dynamic attitude recovery.",
         contribution: "Recoded core flight control law algorithms, replacing inefficient integrated rate loops with an explicit rotation rate demand law.",
