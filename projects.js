@@ -1,72 +1,115 @@
 // ==========================================================================
 // MAIN PORTFOLIO DATA FILE
-// Add, remove, or edit your projects here.
 // ==========================================================================
 
 const projects = [
     {
         title: "Sensor Skins for Vehicle Tires",
-        description: "R&D Undergraduate Researcher | Conducted material synthesis and manufacturing research alongside PhD researchers to develop flexible tactile sensor skins. Formulated, mixed, and processed custom polymer elastomer solutions for tire integration to enable real-time tread deformation and dynamic contact-patch data collection.",
-        mediaType: "image",
-        mediaSrc: "https://eli-mitra.github.io/sensor_skin.png", // 👈 Direct Live URL
-        tags: ["R&D", "Sensor Fabrication", "Automotive"],
+        tags: ["R&D", "Sensor Fabrication", "Automotive", "Materials Science"],
+        // Attach multiple media items (images or videos)
+        media: [
+            { type: "image", src: "media/sensor_skin.png" },
+            { type: "image", src: "media/sensor_skin_prototype.png" } // Add prototype/lab images here
+        ],
+        objective: "Develop a flexible tactile sensor skin capable of withstanding dynamic tire deformation to gather real-time tread wear and contact-patch telemetry.",
+        contribution: "R&D Undergraduate Researcher | Synthesized and processed specialized polymer elastomer formulations alongside PhD researchers, focusing on chemical solution mixing and mold preparation.",
+        technicalDetail: "Optimized polymer solution viscosity for consistent sensor membrane thickness. Evaluated mechanical compliance under cyclical mechanical shear to prevent premature delamination.",
+        result: "Successfully manufactured functional sensor skin prototypes that maintained signal integrity under physical strain cycles for dynamic bench testing.",
         githubLink: "#"
     },
     {
         title: "Flexure Beam-Hinge Structural Simulation",
-        description: "R&D Undergraduate Researcher | Collaborated with a PhD researcher on non-linear numerical structural analysis for advanced flexible lattice geometries. Developed Python scripts using SciPy to model multi-node out-of-plane buckling behavior along the Z-axis under physical displacements to guide experimental validation.",
-        mediaType: "image",
-        mediaSrc: "https://eli-mitra.github.io/beam_hinge.jpg", // 👈 Direct Live URL
         tags: ["R&D", "Python", "SciPy", "FEA", "Structural Mechanics"],
+        media: [
+            { type: "image", src: "media/beam_hinge.jpg" },
+            { type: "image", src: "media/beam_hinge_cad.jpg" } // Add CAD or stress contour images here
+        ],
+        objective: "Perform non-linear structural modeling to predict out-of-plane buckling behaviors in complex flexure beam-hinge lattice geometries.",
+        contribution: "R&D Undergraduate Researcher | Collaborated with a PhD candidate to construct Python-based numerical models for multi-node elastic lattice displacement.",
+        technicalDetail: "Formulated non-linear differential equations using SciPy to capture out-of-plane buckling modes along the Z-axis under physical axial loads.",
+        result: "Provided validated predictive simulations that matched physical test deformation modes within close margins, guiding physical prototype refinement.",
         githubLink: "#"
     },
     {
         title: "Drone Flight Control Law",
-        description: "Engineered a custom rotation rate demand law to improve aerodynamic stability during turbulent conditions. Replaced inefficient rate control loops for high-performance dynamic handling.",
-        mediaType: "video",
-        mediaSrc: "https://eli-mitra.github.io/drone_video1.mp4", // 👈 Direct Live URL
-        tags: ["Python", "Control Theory", "Avionics"],
+        tags: ["Python", "Control Theory", "Avionics", "Robotics"],
+        media: [
+            { type: "video", src: "media/thursday_group3_7.mp4" } // Live flight video demo
+        ],
+        objective: "Engineer a stable flight control software law to mitigate external wind turbulence and improve dynamic attitude recovery.",
+        contribution: "Recoded core flight control law algorithms, replacing inefficient integrated rate loops with an explicit rotation rate demand law.",
+        technicalDetail: "Implemented real-time sensor fusion filtering and attitude transformation matrix calculations in Python to lower latency on onboard hardware.",
+        result: "Demonstrated significantly reduced overshoot and smoother pitch/roll disturbance rejection during dynamic flight testing.",
         githubLink: "#"
     }
 ];
 
 // ==========================================================================
-// RENDER ENGINE (Renders the projects onto index.html automatically)
+// RENDER ENGINE
 // ==========================================================================
 
 function loadProjects() {
     const grid = document.getElementById('portfolio-grid');
     if (!grid) return;
 
-    grid.innerHTML = ''; // Clear existing content
+    grid.innerHTML = ''; 
 
     projects.forEach(project => {
-        // Create card container element
         const card = document.createElement('article');
         card.className = 'project-card';
 
-        // Select media element based on type
-        let mediaHTML = '';
-        if (project.mediaType === 'video') {
-            // Added autoplay, playsinline, and muted so video renders and plays properly
-            mediaHTML = `<video src="${project.mediaSrc}" controls autoplay muted loop playsinline></video>`;
-        } else {
-            mediaHTML = `<img src="${project.mediaSrc}" alt="${project.title}" loading="lazy">`;
-        }
+        // Build media gallery HTML (Iterates through all images/videos in media array)
+        let galleryHTML = '<div class="project-media-gallery">';
+        project.media.forEach(item => {
+            if (item.type === 'video') {
+                galleryHTML += `
+                    <div class="project-media-item">
+                        <video controls autoplay muted loop playsinline preload="metadata">
+                            <source src="${item.src}" type="video/mp4">
+                        </video>
+                    </div>`;
+            } else {
+                galleryHTML += `
+                    <div class="project-media-item">
+                        <img src="${item.src}" alt="${project.title}" loading="lazy">
+                    </div>`;
+            }
+        });
+        galleryHTML += '</div>';
 
-        // Generate technology tags
+        // Generate tags HTML
         const tagsHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
 
-        // Construct full card structure
+        // Construct full vertical layout structure
         card.innerHTML = `
-            <div class="project-media">
-                ${mediaHTML}
-            </div>
-            <div class="project-content">
-                <h2>${project.title}</h2>
-                <div class="tags">${tagsHTML}</div>
-                <p>${project.description}</p>
-                ${project.githubLink && project.githubLink !== '#' ? `<a href="${project.githubLink}" target="_blank" rel="noopener" class="project-link">View Repository →</a>` : ''}
+            <div class="project-container">
+                ${galleryHTML}
+                <div class="project-content">
+                    <h2>${project.title}</h2>
+                    <div class="tags">${tagsHTML}</div>
+                    
+                    <div class="section-block">
+                        <h4>Objective</h4>
+                        <p>${project.objective}</p>
+                    </div>
+                    
+                    <div class="section-block">
+                        <h4>My Contribution</h4>
+                        <p>${project.contribution}</p>
+                    </div>
+
+                    <div class="section-block">
+                        <h4>Technical Detail</h4>
+                        <p>${project.technicalDetail}</p>
+                    </div>
+
+                    <div class="section-block">
+                        <h4>Result</h4>
+                        <p>${project.result}</p>
+                    </div>
+
+                    ${project.githubLink && project.githubLink !== '#' ? `<a href="${project.githubLink}" target="_blank" rel="noopener" class="project-link">View Repository →</a>` : ''}
+                </div>
             </div>
         `;
 
@@ -74,5 +117,4 @@ function loadProjects() {
     });
 }
 
-// Execute when page finishes loading
 document.addEventListener('DOMContentLoaded', loadProjects);
