@@ -1,4 +1,4 @@
-// ==========================================================================
+n// ==========================================================================
 // MAIN PORTFOLIO DATA FILE
 // ==========================================================================
 
@@ -32,8 +32,9 @@ const projects = [
     {
         title: "Drone Flight Control Law",
         tags: ["Python", "Control Theory", "Avionics", "Robotics"],
-        mediaType: "video",
-        mediaSrc: "https://eli-mitra.github.io/media/drone_video1.mp4"
+        media: [
+            { type: "video", src: "https://eli-mitra.github.io/media/drone_video1.mp4" },
+        ],
         objective: "Engineer a stable flight control software law to mitigate external wind turbulence and improve dynamic attitude recovery.",
         contribution: "Recoded core flight control law algorithms, replacing inefficient integrated rate loops with an explicit rotation rate demand law.",
         technicalDetail: "Implemented real-time sensor fusion filtering and attitude transformation matrix calculations in Python to lower latency on onboard hardware.",
