@@ -33,7 +33,7 @@ const projects = [
         title: "Drone Flight Control Law",
         tags: ["Python", "Control Theory", "Avionics", "Robotics"],
         media: [
-            { type: "video", src: "drone_video1.mp4" } // Live flight video demo
+            { type: "video", src: "media/drone_video1.mp4" } // Live flight video demo
         ],
         objective: "Engineer a stable flight control software law to mitigate external wind turbulence and improve dynamic attitude recovery.",
         contribution: "Recoded core flight control law algorithms, replacing inefficient integrated rate loops with an explicit rotation rate demand law.",
