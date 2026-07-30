@@ -7,26 +7,26 @@ const projects = [
     {
         title: "Sensor Skins for Vehicle Tires",
         description: "R&D Undergraduate Researcher | Conducted material synthesis and manufacturing research alongside PhD researchers to develop flexible tactile sensor skins. Formulated, mixed, and processed custom polymer elastomer solutions for tire integration to enable real-time tread deformation and dynamic contact-patch data collection.",
-        mediaType: "image", // Options: "image" or "video"
-        mediaSrc: "media/sensor_skin.png", // Ensure exact file name & case match on GitHub
+        mediaType: "image",
+        mediaSrc: "https://eli-mitra.github.io/sensor_skin.png", // 👈 Direct Live URL
         tags: ["R&D", "Sensor Fabrication", "Automotive"],
-        githubLink: "#" // Replace '#' with your repo link (e.g. "https://github.com/eli-mitra/your-repo")
+        githubLink: "#"
     },
     {
         title: "Flexure Beam-Hinge Structural Simulation",
         description: "R&D Undergraduate Researcher | Collaborated with a PhD researcher on non-linear numerical structural analysis for advanced flexible lattice geometries. Developed Python scripts using SciPy to model multi-node out-of-plane buckling behavior along the Z-axis under physical displacements to guide experimental validation.",
         mediaType: "image",
-        mediaSrc: "media/beam_hinge.jpg",
+        mediaSrc: "https://eli-mitra.github.io/beam_hinge.jpg", // 👈 Direct Live URL
         tags: ["R&D", "Python", "SciPy", "FEA", "Structural Mechanics"],
-        githubLink: "#" 
+        githubLink: "#"
     },
     {
         title: "Drone Flight Control Law",
         description: "Engineered a custom rotation rate demand law to improve aerodynamic stability during turbulent conditions. Replaced inefficient rate control loops for high-performance dynamic handling.",
         mediaType: "video",
-        mediaSrc: "media/thursday_group3_7.mp4",
+        mediaSrc: "https://eli-mitra.github.io/thursday_group3_7.mp4", // 👈 Direct Live URL
         tags: ["Python", "Control Theory", "Avionics"],
-        githubLink: "#" 
+        githubLink: "#"
     }
 ];
 
