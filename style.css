@@ -3,7 +3,7 @@
    ========================================================================== */
 :root {
     --bg-main: #0f172a;       /* Deep slate background */
-    --card-bg: #1e293b;       /* Card/section background */
+    --card-bg: #1e293b;       /* Section/card background */
     --text-main: #f8fafc;     /* Bright text */
     --text-muted: #94a3b8;    /* Muted text */
     --accent: #38bdf8;        /* Vivid blue accent */
@@ -23,7 +23,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory; /* Smooth snap scrolling between full-page projects */
+    scroll-snap-type: y mandatory;
 }
 
 body {
@@ -37,7 +37,7 @@ body {
    Header Navigation
    ========================================================================== */
 .header {
-    background-color: rgba(15, 23, 42, 0.9);
+    background-color: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
@@ -72,141 +72,6 @@ body {
 
 .nav a:hover {
     color: var(--accent);
-}
-
-/* ==========================================================================
-   Vertical Full-Page Project Container
-   ========================================================================== */
-#portfolio-grid {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Each project takes up a full screen height */
-.project-card {
-    min-height: 100vh;
-    scroll-snap-align: start;
-    display: flex;
-    align-items: center;
-    padding: 90px 2rem 2rem 2rem; /* Top padding accommodates fixed header */
-    border-bottom: 1px solid var(--border-color);
-}
-
-.project-container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Split media on left, text on right */
-    gap: 3rem;
-    align-items: center;
-}
-
-/* ==========================================================================
-   Media Gallery (Multiple Images & Videos)
-   ========================================================================== */
-.project-media-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Side-by-side grid for images/prototypes */
-    gap: 1rem;
-}
-
-.project-media-item {
-    width: 100%;
-    height: 240px;
-    background-color: #000;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-}
-
-.project-media-item img,
-.project-media-item video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* If a project has only 1 media item, expand it across both columns */
-.project-media-gallery:has(.project-media-item:only-child) .project-media-item {
-    grid-column: span 2;
-    height: 480px;
-}
-
-/* ==========================================================================
-   Structured Content (Objective, Contribution, Technical Detail, Result)
-   ========================================================================== */
-.project-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.project-content h2 {
-    font-size: 2.25rem;
-    color: var(--text-main);
-    line-height: 1.2;
-}
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.tag {
-    background-color: rgba(56, 189, 248, 0.1);
-    color: var(--accent);
-    padding: 0.25rem 0.6rem;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.section-block h4 {
-    color: var(--accent);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.25rem;
-}
-
-.section-block p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.project-link {
-    display: inline-block;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 0.5rem;
-}
-
-.project-link:hover {
-    color: var(--accent-hover);
-    text-decoration: underline;
-}
-
-/* Responsive adjustments for mobile/tablet */
-@media (max-width: 1024px) {
-    html {
-        scroll-snap-type: none; /* Disable mandatory snap on small screens */
-    }
-    .project-card {
-        min-height: auto;
-        padding: 100px 1.5rem 4rem 1.5rem;
-    }
-    .project-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .project-media-gallery:has(.project-media-item:only-child) .project-media-item {
-        height: 300px;
-    }
 }
 
 /* ==========================================================================
@@ -295,7 +160,128 @@ body {
     transform: translateY(-2px);
 }
 
-/* Footer Styling */
+/* ==========================================================================
+   Vertical Full-Page Project Container
+   ========================================================================== */
+#portfolio-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.project-card {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 2rem 4rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+}
+
+.project-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* ==========================================================================
+   Media Gallery (Multiple Images & Videos)
+   ========================================================================== */
+.project-media-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.project-media-item {
+    width: 100%;
+    height: 240px;
+    background-color: #000;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.project-media-item img,
+.project-media-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Single media item expands full width */
+.project-media-gallery:has(.project-media-item:only-child) .project-media-item {
+    grid-column: span 2;
+    height: 480px;
+}
+
+/* ==========================================================================
+   Structured Content
+   ========================================================================== */
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.project-content h2 {
+    font-size: 2.25rem;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.section-block h4 {
+    color: var(--accent);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+}
+
+.section-block p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.project-link:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 .footer {
     scroll-snap-align: end;
     background-color: #0b1120;
@@ -322,4 +308,25 @@ body {
 
 .social-links a:hover {
     color: var(--accent);
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 1024px) {
+    html {
+        scroll-snap-type: none;
+    }
+    .about-content h2 {
+        font-size: 2.5rem;
+    }
+    .project-card {
+        min-height: auto;
+        padding: 100px 1.5rem 4rem 1.5rem;
+    }
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .project-media-gallery:has(.project-media-item:only-child) .project-media-item {
+        height: 300px;
+    }
 }
