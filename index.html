@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Eli Mitra | Engineering Portfolio</title>
     
-    <!-- Google Fonts for crisp typography -->
+    <base href="./">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,49 +14,56 @@
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Header Navigation -->
     <header class="header">
-        <div class="container header-container">
-            <h1 class="logo">My Portfolio</h1>
+        <div class="header-container">
+            <h1 class="logo">Eli Mitra</h1>
             <nav class="nav">
-                <a href="#projects">Projects</a>
-                <a href="#about">About</a>
+                <a href="#about">About Me</a>
+                <a href="#portfolio-grid">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container">
-        
-        <!-- Hero / Intro -->
-        <section class="hero" id="about">
-            <h2>Hi, I'm <span class="highlight">Eli</span> 👋</h2>
-            <p>I'm a Mechanical Engineering Student at Iowa State University. Welcome to my showcase of engineering projects.</p>
-        </section>
-
-        <!-- Projects Grid Section -->
-        <section id="projects" class="projects-section">
-            <h3 class="section-title">Featured Projects</h3>
-            <div id="portfolio-grid" class="grid">
-                <!-- Javascript will load projects here from projects.js -->
+    <main>
+        <!-- Standalone Full-Page About Me Section -->
+        <section id="about" class="about-page">
+            <div class="about-container">
+                <div class="about-content">
+                    <span class="sub-heading">Hello, I'm</span>
+                    <h2>Eli Mitra</h2>
+                    <p class="about-lead">
+                        Mechanical Engineering student at Iowa State University passionate about robotics, autonomous systems, powertrain design, and hands-on mechanical R&D.
+                    </p>
+                    <p class="about-body">
+                        My work spans full-stack hardware development—from synthesizing polymer sensor skins and running non-linear flexure lattice simulations alongside PhD researchers, to recoding flight control algorithms for autonomous aerial vehicles. I thrive at the intersection of mechanical design, control theory, and dynamic testing.
+                    </p>
+                    <div class="about-buttons">
+                        <a href="#portfolio-grid" class="btn primary-btn">View My Projects ↓</a>
+                        <a href="https://github.com/eli-mitra" target="_blank" rel="noopener" class="btn secondary-btn">GitHub Profile</a>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- Vertical Full-Page Projects Section -->
+        <section id="portfolio-grid">
+            <!-- Loaded dynamically by projects.js -->
+        </section>
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer id="contact" class="footer">
-        <div class="container footer-container">
-            <p>&copy; 2026 | Built for GitHub Pages</p>
+        <div class="footer-container">
+            <p>&copy; 2026 Eli Mitra | Built with HTML, CSS, & JavaScript</p>
             <div class="social-links">
-                <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/eli-mitra" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
             </div>
         </div>
     </footer>
 
-    <!-- Loads your project data script -->
     <script src="projects.js"></script>
 </body>
 </html>
