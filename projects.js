@@ -24,7 +24,7 @@ const projects = [
         title: "Drone Flight Control Law",
         description: "Engineered a custom rotation rate demand law to improve aerodynamic stability during turbulent conditions. Replaced inefficient rate control loops for high-performance dynamic handling.",
         mediaType: "video",
-        mediaSrc: "https://eli-mitra.github.io/thursday_group3_7.mp4", // 👈 Direct Live URL
+        mediaSrc: "https://eli-mitra.github.io/drone_video.mp4", // 👈 Direct Live URL
         tags: ["Python", "Control Theory", "Avionics"],
         githubLink: "#"
     }
