@@ -117,3 +117,17 @@ function loadProjects() {
 }
 
 document.addEventListener('DOMContentLoaded', loadProjects);
+
+// Smooth-scroll button handler
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollBtn = document.getElementById('scroll-to-projects');
+    if (scrollBtn) {
+        scrollBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetSection = document.getElementById('portfolio-grid');
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+});
