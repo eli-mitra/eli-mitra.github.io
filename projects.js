@@ -75,7 +75,7 @@ function loadProjects() {
         });
         galleryHTML += '</div>';
 
-        // Generate tags HTML
+        // Generate technology tags
         const tagsHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
 
         // Construct full vertical layout structure
@@ -115,7 +115,7 @@ function loadProjects() {
     });
 }
 
-// Smooth-scroll & load initialization
+// Initialize rendering & smooth scrolling
 document.addEventListener('DOMContentLoaded', () => {
     loadProjects();
 
