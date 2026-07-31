@@ -78,10 +78,15 @@ function loadProjects() {
             }
         });
         galleryHTML += '</div>';
-
         // Generate technology tags
         const tagsHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-
+        // Generate PDF Citation HTML conditionally (only if paperLink exists)
+        const paperHTML = (project.paperLink && project.paperLink !== '#') ? `
+            <div class="section-block publication-block">
+                <h4>Publication / Citation</h4>
+                <p>📄 <em>${project.paperTitle}</em> — <a href="${project.paperLink}" target="_blank" rel="noopener" class="paper-link">View PDF Document ↗</a></p>
+            </div>
+        ` : '';
         // Construct full vertical layout structure
         card.innerHTML = `
             <div class="project-container">
