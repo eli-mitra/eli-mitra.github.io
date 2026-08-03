@@ -14,7 +14,7 @@ const projects = [
         technicalDetail: "Optimized polymer solution viscosity for consistent sensor membrane thickness. Evaluated mechanical compliance under cyclical mechanical shear to prevent premature delamination.",
         result: "Successfully manufactured functional sensor skin prototypes that maintained signal integrity under physical strain cycles for dynamic bench testing.",
         paperTitle: "Flexible Elastomer Sensor Arrays for Dynamic Tire Telemetry",
-        paperLink: "https://eli-mitra.github.io/sensor_skin_paper.pdf",
+        paperLink: "https://eli-mitra.github.io/sensing_skin_paper.pdf",
         githubLink: "#"
     },
     {
@@ -29,7 +29,7 @@ const projects = [
         technicalDetail: "Formulated non-linear differential equations using SciPy to capture out-of-plane buckling modes along the Z-axis under physical axial loads.",
         result: "Provided validated predictive simulations that matched physical test deformation modes within close margins, guiding physical prototype refinement.",
         paperTitle: "Non-Linear Numerical Modeling of Out-of-Plane Flexure Buckling",
-        paperLink: "https://eli-mitra.github.io/beam_hinge_paper.pdf",
+        paperLink: "https://eli-mitra.github.io/flexture_hinge_paper.pdf",
         githubLink: "#"
     },
     {
