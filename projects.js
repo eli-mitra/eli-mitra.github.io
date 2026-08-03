@@ -49,7 +49,7 @@ const projects = [
         tags: ["Robotics", "Arduino", "Sensors", "Embedded C++", "Hardware"],
         media: [
             // 👈 Make sure this matches your exact MP4 filename in the media/ folder
-            { type: "video", src: "obstacle_robot.mp4" } 
+            { type: "video", src: "robot_video.mp4" } 
         ],
         objective: "Design and build an autonomous wheeled mobile robot capable of detecting and navigating around physical obstacles in real time.",
         contribution: "Designed the physical chassis layout, integrated ultrasonic distance sensors with motor driver circuits, and programmed the decision-making control logic.",
