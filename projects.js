@@ -40,7 +40,7 @@ const projects = [
         ],
         objective: "Engineer a stable flight control software law to mitigate external wind turbulence and improve dynamic attitude recovery.",
         contribution: "Recoded core flight control law algorithms, replacing inefficient integrated rate loops with an explicit rotation rate demand law.",
-        technicalDetail: "Implemented real-time sensor fusion filtering and attitude transformation matrix calculations in Python to lower latency on onboard hardware.",
+        technicalDetail: "Implemented real-time sensor fusion filtering and 3D attitude transformation matrices in Python on an onboard Raspberry Pi, significantly reducing telemetry latency to drive high-frequency, responsive PID loop control.",
         result: "Demonstrated significantly reduced overshoot and smoother pitch/roll disturbance rejection during dynamic flight testing.",
         githubLink: "#"
     },
@@ -52,9 +52,9 @@ const projects = [
             { type: "video", src: "https://eli-mitra.github.io/robot_video.mp4" } 
         ],
         objective: "Design and build an autonomous wheeled mobile robot capable of detecting and navigating around physical obstacles in real time.",
-        contribution: "Designed the physical chassis layout, integrated ultrasonic distance sensors with motor driver circuits, and programmed the decision-making control logic.",
+        contribution: "Fabricated a 3D-printed attachment head to house integrated ultrasonic distance sensors, interfacing them directly with motor driver circuits. Developed reactive decision-making control logic in software to process real-time range data and execute dynamic obstacle-avoidance maneuvers.",
         technicalDetail: "Implemented distance thresholding routines in C++ to trigger dynamic differential drive steering maneuvers when obstacles entered the sensor's field of view.",
-        result: "Successfully demonstrated continuous autonomous navigation and collision avoidance in dynamic indoor environments.",
+        result: "Successfully demonstrated continuous autonomous navigation and collision avoidance in dynamic indoor and outdoor environments.",
         githubLink: "#"
     }
 ];
