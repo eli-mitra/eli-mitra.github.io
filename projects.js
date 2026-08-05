@@ -9,10 +9,10 @@ const projects = [
         media: [
             { type: "image", src: "https://eli-mitra.github.io/sensor_skin.png" }
         ],
-        objective: "Develop a flexible tactile sensor skin capable of withstanding dynamic tire deformation to gather real-time tread wear and contact-patch telemetry.",
+        objective: "Developed a highly flexible tactile skin that maintains its required baseline capacitance and optimal sensor performance even under extreme tire strain.",
         contribution: "R&D Undergraduate Researcher | Synthesized and processed specialized polymer elastomer formulations alongside PhD researchers, focusing on chemical solution mixing and mold preparation.",
-        technicalDetail: "Optimized polymer solution viscosity for consistent sensor membrane thickness. Evaluated mechanical compliance under cyclical mechanical shear to prevent premature delamination.",
-        result: "Successfully manufactured functional sensor skin prototypes that maintained signal integrity under physical strain cycles for dynamic bench testing.",
+        technicalDetail: "Formulated and optimized SEBS-based polymer solutions to achieve consistent viscosity and precise membrane thickness across both dielectric and conductive layers. Evaluated mechanical compliance through cyclical shear testing to mitigate delamination risks and ensure long-term structural integrity under severe strain.",
+        result: "Successfully manufactured functional sensor skin prototypes that maintained integrity under physical strain cycles for dynamic bench testing.",
         paperTitle: "Flexible Elastomer Sensor Arrays for Dynamic Tire Telemetry",
         paperLink: "https://eli-mitra.github.io/sensing_skin_paper.pdf",
         githubLink: "#"
@@ -26,7 +26,7 @@ const projects = [
         ],
         objective: "Perform non-linear structural modeling to predict out-of-plane buckling behaviors in complex flexure beam-hinge lattice geometries.",
         contribution: "R&D Undergraduate Researcher | Collaborated with a PhD candidate to construct Python-based numerical models for multi-node elastic lattice displacement.",
-        technicalDetail: "Formulated non-linear differential equations using SciPy to capture out-of-plane buckling modes along the Z-axis under physical axial loads.",
+        technicalDetail: "Formulated non-linear differential equations using SciPy to capture out-of-plane buckling behavior along the Z-axis. The kinematic model establishes the relationship between X-axis displacement and Z-axis deflection while simultaneously accounting for joint angles and non-linear hinge stiffness under prescribed displacement boundary conditions.",
         result: "Provided validated predictive simulations that matched physical test deformation modes within close margins, guiding physical prototype refinement.",
         paperTitle: "Non-Linear Numerical Modeling of Out-of-Plane Flexure Buckling",
         paperLink: "https://eli-mitra.github.io/flexture_hinge_paper.pdf",
