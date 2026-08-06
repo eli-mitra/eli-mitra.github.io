@@ -282,24 +282,24 @@ body {
 /* ==========================================================================
    Footer
    ========================================================================== */
+/* Compact Footer Styling */
 .footer {
     scroll-snap-align: end;
     background-color: #0b1120;
-    padding: 2.5rem 0;
+    padding: 1rem 0; /* Reduced height/padding */
     border-top: 1px solid var(--border-color);
 }
 
 .footer-container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Compact font size */
 }
-
 .social-links a {
     color: var(--text-muted);
     text-decoration: none;
