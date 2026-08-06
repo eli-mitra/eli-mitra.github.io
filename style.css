@@ -334,75 +334,78 @@ body {
 /* ==========================================================================
    Contact Section Styling
    ========================================================================== */
+/* ==========================================================================
+   Compact Contact Section Styling
+   ========================================================================== */
 .contact-page {
     min-height: 100vh;
     scroll-snap-align: start;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px 2rem 4rem 2rem;
+    padding: 80px 2rem 2rem 2rem;
     background-color: var(--bg-main);
     border-top: 1px solid var(--border-color);
 }
 
 .contact-container {
-    max-width: 900px;
+    max-width: 650px; /* Reduced overall section width to shrink cards horizontally */
     margin: 0 auto;
     width: 100%;
     text-align: center;
 }
 
 .contact-container h2 {
-    font-size: 3rem;
+    font-size: 2.25rem; /* Slightly smaller header */
     font-weight: 700;
     color: var(--text-main);
-    margin: 0.5rem 0 1rem 0;
+    margin: 0.25rem 0 0.75rem 0;
 }
 
 .contact-lead {
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: var(--text-muted);
-    max-width: 650px;
-    margin: 0 auto 3rem auto;
-    line-height: 1.6;
+    max-width: 550px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.5;
 }
 
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1.25rem; /* Tighter gap between cards */
 }
 
 .contact-card {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    padding: 2.5rem 2rem;
+    padding: 1.25rem 1.25rem; /* Reduced inner padding from 2.5rem to 1.25rem */
     text-align: left;
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .contact-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     border-color: var(--accent);
 }
 
 .contact-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem; /* Smaller icon size */
+    margin-bottom: 0.5rem;
 }
 
 .contact-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Smaller title */
     color: var(--text-main);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .contact-card p {
     color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
+    font-size: 0.85rem; /* Tighter subtext */
+    margin-bottom: 0.85rem;
+    line-height: 1.4;
 }
 
 .contact-link {
@@ -410,7 +413,7 @@ body {
     color: var(--accent);
     font-weight: 600;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
 }
 
 .contact-link:hover {
@@ -418,8 +421,7 @@ body {
     text-decoration: underline;
 }
 
-/* Mobile Responsiveness for Contact Section */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .contact-grid {
         grid-template-columns: 1fr;
     }
